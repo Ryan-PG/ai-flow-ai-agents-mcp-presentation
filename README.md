@@ -16,6 +16,12 @@ Welcome to the official repository for my presentation titled **"AI Flows, MCP, 
 
 ---
 
+## 🖼️ Demo
+
+![Download the presentation slides](./AIFlow-AIAgens-MCP.gif)
+
+---
+
 ## 📂 Repository Structure
 
 ```
