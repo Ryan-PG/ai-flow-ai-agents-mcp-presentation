@@ -1,0 +1,133 @@
+{
+  "name": "YT - RSS Grabber - Sheet",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9c884c3d-f0dd-46da-b13a-2a4281b4a7e2",
+      "name": "RSS Feed Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JHEMhPxfze4NaHhsgW4HiAeYP2vtUQrl4w6hfuGVPQI",
+          "mode": "list",
+          "cachedResultName": "RSS test",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JHEMhPxfze4NaHhsgW4HiAeYP2vtUQrl4w6hfuGVPQI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JHEMhPxfze4NaHhsgW4HiAeYP2vtUQrl4w6hfuGVPQI/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Creator": "={{ $json.creator }}",
+            "Title": "={{ $json.title }}",
+            "Link": "={{ $json.link }}",
+            "Content": "={{ $json.content }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Creator",
+              "displayName": "Creator",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        220,
+        0
+      ],
+      "id": "fd1543b4-38cf-4660-80e1-d7a1af274a93",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "AKsQHoNuAHVfUyaB",
+          "name": "YT - N8N - Sheet"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "RSS Feed Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c80f1899-cb2e-4df9-b92b-c730c6073163",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ff504a8653497ac69a96d9696b048da6d070266d00721efbbaf04da10074518c"
+  },
+  "id": "ZEsbe1WgJW5LgD8d",
+  "tags": []
+}
