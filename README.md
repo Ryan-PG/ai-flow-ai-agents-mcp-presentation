@@ -30,7 +30,7 @@ Welcome to the official repository for my presentation titled **"AI Flows, MCP, 
 
 ---
 
-## 📽️ Presentation Overview
+## 📽️ Session Overview
 
 | Section             | Topics Covered                                |
 | ------------------- | --------------------------------------------- |
